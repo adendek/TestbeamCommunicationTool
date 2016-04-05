@@ -1,0 +1,23 @@
+        case tutorial::TestbeamMessage_MESSAGE_TYPE_INIT_MAMBA_REQ:
+            cout<<"receive TestbeamMessage_MESSAGE_TYPE_INIT_MAMBA_REQ  Hii!"<<endl;
+            cout<<"sequence number!"<< req->seqno()<<endl;
+            break;
+        case tutorial::TestbeamMessage_MESSAGE_TYPE_START_EVENT_MAMBA_REQ:
+            cout<<"receive TestbeamMessage_MESSAGE_TYPE_START_EVENT_MAMBA_REQ  Hii!"<<endl;
+            cout<<"sequence number!"<< req->seqno()<<endl;
+            cout<<"print parameters!"<<endl;
+            initEventReq = req->initeventreq();
+            cout<< "runtype" << initEventReq.runtype() <<endl;
+            cout<< "biasvoltage" << initEventReq.biasvoltage() <<endl;
+            cout<< "angle" << initEventReq.angle() <<endl;
+            cout<< "stagex" << initEventReq.stagex() <<endl;
+            cout<< "stagey" << initEventReq.stagey() <<endl;
+            cout<< "temperature" << initEventReq.temperature() <<endl;
+            cout<< "sector" << initEventReq.sector() <<endl;
+            cout<< "sensorname" << initEventReq.sensorname() <<endl;
+            cout<< "operatorname" << initEventReq.operatorname() <<endl;
+            cout<< "****************************************************" <<endl;
+            break;
+        default:
+            cout<<"receive Unknow (yet) messages"<<endl;
+            break;
